@@ -1,4 +1,10 @@
 {
   "item.modone.citrine" : "Citrine",
-  "item.modone.raw_citrine" : "Raw Citrine"
+  "item.modone.raw_citrine" : "Raw Citrine",
+  "block.modone.citrine_block": "Citrine Block",
+  "block.modone.citrine_ore": "Citrine Ore",
+  "block.modone.deepslate_citrine_ore": "Deepslate Citrine Ore",
+  "block.modone.endstone_citrine_ore": "Endstone Citrine Ore",
+  "block.modone.netherrack_citrine_ore": "Netherrack Citrine Ore",
+  "block.modone.raw_citrine_block": "Raw Citrine Block"
 }

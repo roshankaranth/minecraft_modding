@@ -1,8 +1,8 @@
 package com.rosh.modone;
 
 import com.mojang.logging.LogUtils;
+import com.rosh.modone.block.Modblocks;
 import com.rosh.modone.item.Moditems;
-import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -12,11 +12,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -45,6 +42,7 @@ public class modone
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         Moditems.register(eventBus);
+        Modblocks.register(eventBus);
         IEventBus modEventBus = eventBus;
 
         // Register the commonSetup method for modloading
