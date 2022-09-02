@@ -1,6 +1,7 @@
-package com.example.examplemod;
+package com.rosh.modone;
 
 import com.mojang.logging.LogUtils;
+import com.rosh.modone.item.Moditems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -42,7 +43,9 @@ public class modone
 
     public modone()
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        Moditems.register(eventBus);
+        IEventBus modEventBus = eventBus;
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
